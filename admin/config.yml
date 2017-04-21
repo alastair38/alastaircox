@@ -18,13 +18,13 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: "date", widget: "datetime"}
 
   - name: "settings"
-    label: "Settings"
-    editor:
-      preview: false
-    files:
-      - name: "general"
-        label: "Site Settings"
+        label: "Settings"
         file: "_data/settings.yml"
-        description: "General Site Settings"
+        description: "Author descriptions"
         fields:
-          - {label: "Global title", name: "site_title", widget: "string"}
+          - name: settings
+            label: Settings
+            widget: list
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
