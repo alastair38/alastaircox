@@ -1,0 +1,47 @@
+<header class="site-header" role="banner">
+{% assign site_name = getenv "STATUSKIT_PAGE_TITLE" %}
+
+<div class="navbar-fixed">
+  <nav class="z-depth-0 header">
+   <div class="nav-wrapper">
+     <a href="{{ site.url }}" class="brand-logo center"><img style="width: 40px; height: 40px; margin-top: 12px; border: 1px solid #fafafa;" class="circle" src="https://alastair38.github.io/revamp/moi_scanlines.png" /></a>
+     <ul id="nav-mobile" class="left hide-on-med-and-down black-text">
+       {% for my_page in site.pages %}
+{% if my_page.menu %}
+
+{% if my_page.title == page.title  %}
+
+<li>
+  <a class="page-link active" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+</li>
+{% else %}
+<li>
+  <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+</li>
+{% endif %}
+
+{% endif %}
+{% endfor %}
+
+     </ul>
+   </div>
+ </nav>
+</div>
+{% if page.layout == 'home' %}
+
+<div class="hide-on-med-and-down fixed-action-btn">
+  <a href="#contact" class="btn-flat white light"><i class="icon-wallet icons left"></i>{{site.donate_button}} {{site_name }}</a>
+</div>
+
+{% endif %}
+{% if page.layout != 'home' %}
+
+<div class="hide-on-med-and-down fixed-action-btn outline">
+      <a href="#contact" class="btn-flat white light"><i class="icon-wallet icons left"></i>{{site.donate_button}}</a>
+</div>
+
+
+
+{% endif %}
+
+</header>

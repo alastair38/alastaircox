@@ -1,0 +1,67 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Alastair Cox
+email: alastair@alastaircox.com
+description: Web developer & designer, open standards advocate, static cyclist and for-purpose worker ant. Specialising in Progressive Web Apps for non-profit and academic projects. I work primarily with Jekyll, Roots, Polymer, Firebase, Grav and Wordpress.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#social settings
+twitter_username: dementiamap
+github_username:  alastair38
+mobile_no: 07772 758 636
+donate_button: Contact
+
+#Charity registrations
+engwal_number:
+scot_number:
+
+# Build settings
+markdown: kramdown
+# theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+permalink: /:title
+
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:title
+  resources:
+    output: true
+    permalink: /:collection/:title
+
+
+defaults:
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: work
+  - scope:
+      path: ""
+      type: resources
+    values:
+      layout: resource
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      featuredPage: false

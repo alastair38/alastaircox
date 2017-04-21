@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+
+  <body class="white {{page.layout}}">
+
+
+    {% include header.html %}
+    {% if page.layout == 'home' %}
+
+      <main class="row container" aria-label="Content">
+
+    {% endif %}
+    {% if page.layout != 'home' %}
+
+      <main class="row" aria-label="Content">
+
+    {% endif %}
+
+        {{ content }}
+
+    </main>
+
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

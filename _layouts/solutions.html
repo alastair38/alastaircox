@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+     <div class="bg">
+       <div id="page-header" class="thin center">
+         <h1 class="page thin">
+           {{ page.title | escape }}
+         </h1><i class="icon-{{page.icon}} icons"></i>
+         <p>{{ page.quote }}</p>
+       </div>
+     </div>
+
+
+          <div class="content container">
+            {{ content }}
+          </div>
+          <h3 class="center thin"> {{ page.sub_header }}</h3>
+          <div class="grey lighten-4 solutions-details container">
+
+            {% for solution in site.data.solutions %}
+
+            <i class="{{ solution.color}} icon-{{solution.icon}} icons"></i>
+
+            <p class="center">
+              {{ solution.description }}
+            </p>
+
+            {% endfor %}
+
+            <strong> {{ page.bold }}</strong>
+
+          </div>

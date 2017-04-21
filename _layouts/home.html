@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<main class="row">
+
+    <div id="page-header" class="col s12 center">
+
+      <h1 class="center thin">
+        {{page.title}}
+      </h1>
+     <p class="center thin">{{page.byline}}</p>
+    </div>
+    <div id="page-text" class="col s12 thin">
+      {% for page in site.pages %}
+
+      {% if page.featuredPage %}
+      <p class="col s12 m4 center">
+        <i class="icon-{{page.icon}} icons"></i>
+        <span>
+         <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+       </span>
+      </p>
+      {% endif %}
+
+    {% endfor %}
+    </div>
+
+    {% if page.button %}
+
+    {% endif %}
+  </main>
+
+  <script>
+      jQuery(window).scroll(function() {
+           var scroll = jQuery(window).scrollTop();
+
+          if (scroll >= 70) {
+              jQuery(".header").addClass('fill');
+              jQuery(".fixed-action-btn").addClass('outline');
+              jQuery("h1.page").addClass('shrink');
+          } else {
+          jQuery(".header").removeClass('fill');
+          jQuery(".fixed-action-btn").removeClass('outline');
+          jQuery("h1.page").removeClass('shrink');
+
+
+           }
+    });
+
+      </script>

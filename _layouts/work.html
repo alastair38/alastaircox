@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+     <div class="bg">
+       <div id="page-header" class="center thin">
+         <h1 class="page thin">
+           {{ page.title | escape }}
+         </h1><i class="icon-{{page.icon}} icons"></i>
+         <p>{{ page.quote }}</p>
+       </div>
+     </div>
+
+
+          <div class="content container">
+            {{ content }}
+
+  {% for lab in site.data.labs %}
+    <div class="{{ lab.color }} lab-details">
+      <h4 class="center">{{ lab.name }}</h4>
+
+      <a class="white-text" href="{{lab.link}}"><i class="icon-{{lab.icon}} icons"></i></a>
+
+      {{ lab.description }}
+
+      <label class="black-text">Technologies: {{ lab.technologies }}</label>
+
+    </div>
+  {% endfor %}
+
+
+
+
+
+          </div>

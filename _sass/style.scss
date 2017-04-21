@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+// Mixins
+@import "components/prefixer";
+@import "components/mixins";
+@import "components/color";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// components
+@import "components/global";
+@import "components/icons-material-design";
+@import "components/grid";
+@import "components/navbar";
+@import "components/roboto";
+@import "components/typography";
+@import "components/cards";
+@import "components/toast";
+@import "components/tabs";
+@import "components/tooltip";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/waves";
+@import "components/modal";
+@import "components/collapsible";
+@import "components/chips";
+@import "components/materialbox";
+@import "components/forms/forms";
+@import "components/table_of_contents";
+@import "components/sideNav";
+@import "components/preloader";
+@import "components/slider";
+@import "components/carousel";
+@import "components/date_picker/default";
+@import "components/date_picker/default.date";
+@import "components/date_picker/default.time";
+
+main.row {margin-bottom: -1px !important;}
+
+
+body.home {
+  background: url(images/topography.png) rgba(2,2,9,.5);
+  background-position: center;
+  background-attachment: fixed;
+  padding: 0 !important;
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  transition: 500ms;
+}
+
+body:before {
+
+}
+
+.bg {
+  background: url("images/topography.png") repeat;
+}
+
+.header-bg {position: absolute; display: block; top: 0; bottom: 0; left: 0; right: 0; background: rgba(2,2,9,.5); margin: 0; padding: 4em 0;}
+
+.home nav {
+  background: transparent;
+  border-bottom: 0px solid #fefefe;
+}
+
+nav.fill i, .page nav i, .post nav i, .resources nav i, .resource nav i, .offline nav i {
+color: tomato;
+}
+
+nav i {
+  margin-right: 0 !important;
+}
+
+.page, .post, .resources, .resource, .offline, .work, .solutions {
+  main.row {
+    margin: 0 0 -1px 0;
+  }
+}
+
+
+.page, .post, .resources, .resource, .offline, .work, .solutions  {
+  #page-header {
+    padding: 3em 0;
+    color: white;
+    position: relative;
+    background:  rgba(2,2,9,.5);
+  }
+
+}
+
+
+ .icon-share {
+
+   font-size: 1em;
+   padding: 10px;
+   width: 60px;
+   height: 60px;
+   line-height: 60px;
+   border-radius: 50%;
+   border: 2px solid #fafafa;
+   color: #fafafa;
+
+ }
+
+#page-text {
+  background: transparent;
+  position: relative;
+  /*-webkit-clip-path: polygon(50% 8%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+clip-path: polygon(50% 8%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);*/
+  margin-top: -100px;
+  margin-bottom: 0;
+  color: #fafafa;
+  font-size: 20px;
+  line-height: 2em;
+  padding: 4em 4em;
+  a {
+    color: #fafafa;
+    &:hover {
+      color: #222;
+    }
+  }
+
+}
+#page-text span {
+display: block;
+font-size: 2rem;
+padding: 1rem 0;
+}
+
+
+.home nav a {
+  color: $secondary-color;
+}
+
+nav.fill {
+  background: $secondary-color;
+  a {
+    color: $navbar-font-color;
+  }
+}
+
+.fixed-action-btn {
+top: 0 !important;
+right: 16px !important;
+
+}
+
+.fixed-action-btn a {
+color: tomato !important;
+
+}
+
+.outline a {
+color: white !important;
+background: tomato !important;
+}
+
+.home #page-header {
+  padding: 5em 0;
+  color: white;
+
+}
+
+#page-header {
+  height: 300px;
+}
+
+.work #page-header p:before, .solutions #page-header p:before {
+  content: '{ ';
+  color: yellow;
+}
+
+.work #page-header p:after, .solutions #page-header p:after {
+  content: ' }';
+  color: yellow;
+}
+
+
+
+a.page-link.active::before {content: '';
+position: absolute;
+top: 70%;
+height: 2px;
+left: 5px;
+right: 5px;
+background: teal;
+}
+
+a.page-link.active {position: relative;background: transparent;}
+
+.home #page-header:before {
+content: '';
+position: absolute;
+top:0;
+bottom: 0;
+height: 100%;
+left: 0%;
+right: 0;
+z-index: -1;
+  background: rgba(2,2,9,.5);
+}
+
+.icon-bulb {
+color: white;
+}
+
+
+
+.shrink { font-size: 2.5em; position: fixed; top: 30px; left: 0; right: 0;z-index: 10000; color: #222; background: #e3e3e3; transition: 840ms !important;}
+
+h1 {transition: 0ms !important;}
+
+.content {
+  font-size: 1.25em;
+  font-weight: 300;
+  padding: 1em 0;
+}
+
+.solutions-details {
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 1em;
+}
+
+
+.lab-details {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.icon-book-open, .icon-like, .icon-magic-wand, .icon-chemistry, .icon-notebook, .icon-directions {
+  font-size: 1.5em;
+  color: tomato;
+  display: block;
+  text-align: center;
+  background: #fafafa;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  border: 2px solid tomato;
+  margin-left: calc(50% - 30px);
+}
+
+.lab-details .icons {
+  font-size: 1.15em;
+  color: #fafafa  ;
+  display: block;
+  text-align: center;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fafafa;
+  margin-left: calc(50% - 25px);
+}
+
+.solutions-details .icons {
+  font-size: 1.15em;
+  color: #fafafa ;
+  display: block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin-left: calc(50% - 25px);
+}
+
+.section {padding-bottom: 3em;}
+.donate {text-align: center;}
+a.btn-flat.btn-large {border: 1px solid rgba(136, 136, 136, 0.55);}
+
+footer {
+  background: #fafafa !important;
+  color: #222 !important;
+}
+
+footer ul, .modal ul {
+  margin-left: 0;
+  text-align: center;
+}
+
+footer ul li, .modal ul li {
+  display: inline-block;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.btn-flat {color: #607D8B !important;}

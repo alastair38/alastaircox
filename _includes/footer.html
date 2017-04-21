@@ -1,0 +1,40 @@
+<!-- <script>
+
+localStorage.setItem(window.location.href, window.location.href);
+if(localStorage.getItem(window.location.href)) {
+  var links = document.querySelectorAll("a");
+  for (i=0;i<links.length;i++) {
+var link = links[i];
+if(link.href == localStorage.getItem(link.href)){
+  console.log(link.href);
+  link.setAttribute('data-visited', 'true');}
+}
+
+} else {
+
+}
+</script> -->
+<footer class="page-footer light">
+     <div class="container">
+       <div id ="contact" class="row">
+         <div class="col s12">
+
+           <ul>
+             <label>Contact me</label>
+             <li>
+
+             </li>
+             <li><a class="btn-flat light" href="https://twitter.com/{{ site.twitter_username }}"><i class="icon-social-twitter icons left"></i>Twitter</a></li>
+
+             <li><a class="btn-flat light" href="mailto:{{ site.email }}"><i class="icon-envelope icons left"></i>Email</a></li>
+             <li><a class="btn-flat light"><i class="icon-phone icons left"></i>{{ site.mobile_no }}</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class="footer-copyright center">
+       <div class="container black-text">
+        © {{ site.title | escape }} <script>document.write(new Date().getFullYear())</script>
+       </div>
+     </div>
+   </footer>

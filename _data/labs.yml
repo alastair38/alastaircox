@@ -1,0 +1,13 @@
+- name: DementiaWords
+  description: <p>The DementiaWords web app takes its inspiration from the Dementia Engagement and Empowerment Project (DEEP) guidelines on use of language when discussing dementia. As part of this awareness raising, the app tracks negative langauge usage across online UK media.</p> <p>Key to this process was developing a simple, robust workflow to allow easy data collation and then made available through a modular api.</p><p>The information gathering is done through a combination of Google News alerts and Pocket to save and tag articles deemed to use inappropriate language.</p><p> The original plan had been to then build the app on top of Pocket's API, but I ultimately wanted an easier way of sharing the raw data with others. To do this, I added Google Sheets as the central respository, taking advantage of IFTTT integration with Pocket (to automate transferring data from one service to the other) and the well documented Sheets API.</p><p>The initial build of DementiaWords was fueled by a JSON pipe from Google Sheets, though this raised some issues of scalability. Then, as I was transferring over to a Jekyll-based solution, I came across the brilliant Awesome Table Sheets add-on. This offers built in filtering functionality and caching, key aspects of the architecture I was looking for. Behind the scenes I can continue to work on the Sheets 'backend' and make use of old-school spreadsheet formulae to bake some basic analytics into the app.</p>
+  technologies: Jekyll, Google Sheets, Awesome Table, Pocket, IFTTT
+  link: http://www.intheburgh.co.uk/
+  icon: link
+  color: yellow darken-1
+
+- name: You can be here
+  description: <p>This is an experimental mapping web app to offer people living with dementia and carers a means of marking locations as 'dementia-friendly'. Rather than developing a standalone solution, I consciously utilised the existing Google Places API, adding a layer upon which 'dementia-friendly' information could be added whilst retaining access to the unparalleled dataset provided by Google.</p>
+  technologies: Firebase, Polymer, Oauth (Facebook, Google and Twitter authentication), Google Maps API, Google Places API
+  link: http://www.intheburgh.co.uk/
+  icon: link
+  color: teal lighten-2

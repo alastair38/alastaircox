@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="bg">
+  <div id="page-header" class="center">
+    <h1 class="page center thin">
+      {{ page.title | escape }}
+    </h1>
+    <p>{{ page.date | date_to_long_string }}</p>
+    <p><a href="#modal1"><i class="icon-share icons"></i></a></p>
+
+  </div>
+</div>
+
+     <div class="content container">
+       {{ content }}
+       <div class="row">
+         {% if page.description %}
+         <p class="col s12">
+           {{ page.description }}
+         </p>
+         {% endif %}
+       </div>
+
+     </div>
+
+{% include share.html %}

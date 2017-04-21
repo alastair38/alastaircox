@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div style="background: url(http://localhost:4000/assets/images/person_back.jpg) no-repeat; background-size: cover; background-position: center center;" id="page-header">
+  <div class="header-bg thin center">
+    <h1 class=" thin">
+      {{ page.title | escape }}
+    </h1>
+    <p>{{ page.date | date_to_long_string }}</p>
+        <p><a href="#modal1"><i class="icon-share icons"></i></a></p>
+
+  </div>
+</div>
+
+
+     <div class="content container">
+       {{ content }}
+       <div class="row">
+         {% if page.quote %}
+         <blockquote class="col s12">
+           {{ page.quote }}
+         </blockquote>
+         {% endif %}
+       </div>
+
+
+
+     </div>
+
+  {% include share.html %}

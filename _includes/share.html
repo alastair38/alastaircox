@@ -1,0 +1,25 @@
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet">
+  <div class="modal-content center">
+    <label>Share this content: </label>
+    <ul>
+         <li><a class="btn-flat light" href="https://twitter.com/intent/tweet?url={{site.url}}{{page.url}}&via={{ site.twitter_username }}&text={{page.title}}" title="Share on Twitter" target="_blank"><i class="icon-social-twitter icons left"></i>Twitter</a></li>
+         <li><a class="btn-flat light" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}" title="Share on Facebook" target="_blank"><i class="icon-social-facebook icons left"></i>Facebook</a></li>
+         <li><a class="btn-flat light" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}&title={{page.title}}&summary={{page.description}}&source={{site.title}}" title="Share on Linkedin" target="_blank"><i class="icon-social-linkedin icons left"></i>LinkedIn</a></li>
+         <li><a class="btn-flat light" href="mailto:?subject=I wanted to share this post with you from {{site.title}}&body={{page.title}}&#32;&#32;{{site.url}}{{page.url}}" title="Email to a friend/colleague" target="_blank"><i class="icon-envelope icons left"></i>Email</a> </li>
+
+       </ul>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+$('.modal').modal();
+});
+
+
+</script>

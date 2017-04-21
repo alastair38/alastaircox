@@ -1,0 +1,42 @@
+---
+
+---
+
+@charset "UTF-8";
+
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background: #e7e7e2;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+
+ nav a[data-visited]:after {
+  content: "\E876";
+   font-family: "Material Icons";
+   position: absolute;
+ }
+
+ a {position: relative;}
+
+ a.page-link.active {background: rgba(0,0,0,.1);}
+
+
+.page-link {position: relative; overflow: hidden;}
+
+@import "style.scss";
+
+// Demo only
+.demo {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0.5em;
+  color: #fff;
+  text-align: center;
+  background-color: #D34A28;
+}

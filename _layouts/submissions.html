@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+<p>
+  Please submit your content for the Digital Families Research Network by filling out the form below. All fields are required. Upon submission, the content will be sent for approval before being published.
+</p>
+
+
+<div class="row">
+  <form class="col s12 form" method="POST" action="https://api.staticman.net/v2/entry/alastair38/jekcms/master/{{page.collection}}">
+    <input name="options[redirect]" type="hidden" value="https://alastair38.github.io/jekcms/">
+    <input name="options[origin]" type="hidden" value="https://alastair38.github.io/jekcms/">
+    <input name="fields[verify]" type="hidden">
+    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+
+     <div class="row">
+  <div class="input-field col s12">
+    <i class="material-icons prefix">mode_edit</i>
+
+    <input name="fields[title]" id="title" type="text" class="validate" required>
+    <label for="title">Title of submission</label>
+  </div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+  <i class="material-icons prefix">account_circle</i>
+
+<input name="fields[person]" id="person" type="text" class="validate" required>
+<label for="person">Your name</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+  <i class="material-icons prefix">email</i>
+
+<input name="fields[email]" id="email" type="email" class="validate" required>
+<label for="email">Your email</label>
+</div>
+</div>
+
+
+
+     <div class="row">
+       <p class="col s12">
+         <label for="description">Enter your content below</label>
+       </p>
+       <div class="input-field col s12">
+
+         <textarea id="description" name="fields[description]" class="materialize-textarea"></textarea>
+       </div>
+     </div>
+     <div class="row">
+       <p class="col s12">
+        <input type="checkbox" id="ready" />
+        <label for="ready">All fields completed?</label>
+      </p>
+
+     </div>
+
+     <button onclick="myFunction()" id="submitted" class="btn disabled" type="submit">Submit Content</button>
+
+   </form>
+ </div>
+</article>
+ <script>
+
+
+
+
+   $(document).ready(function(){
+     var simplemde = new SimpleMDE({
+        promptURLs: true,
+        autosave: {
+            enabled: true,
+            uniqueId: "submissionsPage",
+        },
+    });
+
+       $('input[type="checkbox"]').click(function(){
+           if($(this).prop("checked") == true){
+             $( "#submitted" ).removeClass( "disabled" );
+
+           }
+           else if($(this).prop("checked") == false){
+             $( "#submitted" ).addClass( "disabled" );
+           }
+       });
+   });
+
+
+ </script>

@@ -1,0 +1,14 @@
+- name: Wordpress
+  description: Bespoke Wordpress deployments using themes written from scratch for maximum flexibility.
+  icon: puzzle
+  color: materialize-red lighten-2
+
+- name: JAMstack
+  description: JAMstack sites built using flat-file CMSs like Grav or static-site generators Jekyll and Roots, with additional functionality provided by reusable APIs such as Firebase, Google Maps, Snipcart and Moot.
+  icon: puzzle
+  color: yellow darken-1
+
+- name: Hybrid
+  description: Hybrid sites with Wordpress as an administrative backend, but using JAMstack to compile and display the content.
+  icon: puzzle
+  color: teal
