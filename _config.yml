@@ -39,26 +39,7 @@ exclude:
 
 permalink: /:title
 
-collections:
-  publications:
-    output: true
-    permalink: /:collection/:title
-  resources:
-    output: true
-    permalink: /:collection/:title
-
-
 defaults:
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: work
-  - scope:
-      path: ""
-      type: resources
-    values:
-      layout: resource
   - scope:
       path: ""
       type: pages
