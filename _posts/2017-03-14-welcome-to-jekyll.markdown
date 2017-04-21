@@ -2,7 +2,6 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2017-03-14 16:42:01 +0000
-categories: jekyll update
 quote: Whereupon I encountered the strangest of creatures, an older, white male of considerable means to whom change was not an imposter to be throttled, but - to the contrary - embodied a lifeblood to be imbibed with relish.
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
