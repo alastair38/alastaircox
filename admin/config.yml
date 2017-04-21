@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - name: "general"
         label: "Site Settings"
-        file: "_data/settings.json"
+        file: "_data/settings.yml"
         description: "General Site Settings"
         fields:
           - {label: "Global title", name: "site_title", widget: "string"}
