@@ -39,6 +39,7 @@ collections: # A list of collections the CMS should be able to edit
         label: "Authors"
         file: "_data/authors.yml"
         description: "Author descriptions"
+        create: true
         fields:
           - name: authors
             label: Authors
